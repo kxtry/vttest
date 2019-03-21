@@ -59,6 +59,8 @@ jmp_buf intrenv;
 static char empty[1];
 static char *current_menu = empty;
 
+#define FLUSH fflush(stdout)
+
 static void
 usage(void)
 {
@@ -1506,6 +1508,7 @@ menu2(MENU *table, int top)
     printf("\n          Enter choice number (0 - %d): ", tablesize);
     for (;;) {
       char *s = storage;
+      FLUSH;
       inputline(s);
       choice = 0;
       redraw = FALSE;
