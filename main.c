@@ -102,8 +102,10 @@ main(int argc, char *argv[])
     };
   /* *INDENT-ON* */
   printf("press c key to continue");
+  FLUSH;
   while(getchar() != 'c'){
     printf("press c key to continue");
+    FLUSH;
   }
 
   while (argc-- > 1) {
