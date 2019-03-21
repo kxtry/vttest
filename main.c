@@ -196,7 +196,9 @@ main(int argc, char *argv[])
     if (use_padding)
       printf(" (padded)");
 
+    fflush(stdout);
     __(title(2), println("Choose test type:"));
+    fflush(stdout);
   } while (menu(mainmenu));
   bye();
   return EXIT_SUCCESS;
