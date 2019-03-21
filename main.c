@@ -101,6 +101,10 @@ main(int argc, char *argv[])
       { "",                                                  0 }
     };
   /* *INDENT-ON* */
+  printf("press c key to continue");
+  while(getchar() != 'c'){
+    printf("press c key to continue");
+  }
 
   while (argc-- > 1) {
     const char *opt = *++argv;
